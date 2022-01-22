@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 
 #pragma warning disable CA1707
@@ -66,6 +66,7 @@ namespace LookingForArrayElements.Tests
             };
 
             // Act
+            // Replace ArgumentNullException with ArgumentException in new task.
             Assert.Throws<ArgumentNullException>(
                 () => DecimalCounter.GetDecimalsCount(Array.Empty<decimal>(), ranges),
                 message: "Method throws ArgumentNullException in case one of the ranges is null.");
