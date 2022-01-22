@@ -66,6 +66,7 @@ namespace LookingForArrayElements.Tests
             };
 
             // Act
+            // Replace ArgumentNullException with ArgumentException in new task.
             Assert.Throws<ArgumentNullException>(
                 () => DecimalCounter.GetDecimalsCount(Array.Empty<decimal>(), ranges),
                 message: "Method throws ArgumentNullException in case one of the ranges is null.");
@@ -105,7 +106,9 @@ namespace LookingForArrayElements.Tests
         }
 
         [Test]
+#pragma warning disable S4136 // Method overloads should be grouped together
         public void DecimalCounter_FiveElementsOneRange_ReturnsResult()
+#pragma warning restore S4136 // Method overloads should be grouped together
         {
             // Arrange
             decimal[][] ranges =
@@ -121,7 +124,9 @@ namespace LookingForArrayElements.Tests
         }
 
         [Test]
+#pragma warning disable S4136 // Method overloads should be grouped together
         public void DecimalCounter_FiveElementsTwoRanges_ReturnsResult()
+#pragma warning restore S4136 // Method overloads should be grouped together
         {
             // Arrange
             decimal[][] ranges =
@@ -138,7 +143,9 @@ namespace LookingForArrayElements.Tests
         }
 
         [Test]
+#pragma warning disable S4136 // Method overloads should be grouped together
         public void DecimalCounter_FiveElementsThreeRanges_ReturnsResult()
+#pragma warning restore S4136 // Method overloads should be grouped together
         {
             // Arrange
             decimal[][] ranges =
@@ -156,7 +163,9 @@ namespace LookingForArrayElements.Tests
         }
 
         [Test]
+#pragma warning disable S4136 // Method overloads should be grouped together
         public void DecimalCounter_FifteenElementsOneRange_ReturnsResult()
+#pragma warning restore S4136 // Method overloads should be grouped together
         {
             // Arrange
             decimal[][] ranges =
@@ -172,7 +181,9 @@ namespace LookingForArrayElements.Tests
         }
 
         [Test]
+#pragma warning disable S4136 // Method overloads should be grouped together
         public void DecimalCounter_FifteenElementsTwoRanges_ReturnsResult()
+#pragma warning restore S4136 // Method overloads should be grouped together
         {
             // Arrange
             decimal[][] ranges =
@@ -189,7 +200,9 @@ namespace LookingForArrayElements.Tests
         }
 
         [Test]
+#pragma warning disable S4136 // Method overloads should be grouped together
         public void DecimalCounter_FifteenElementsThreeRanges_ReturnsResult()
+#pragma warning restore S4136 // Method overloads should be grouped together
         {
             // Arrange
             decimal[][] ranges =
